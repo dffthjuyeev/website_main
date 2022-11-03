@@ -1,0 +1,215 @@
+/* Body Parameters */
+body {
+  background-color: #23272a;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Box Parameters */
+.box {
+  width: 600px;
+  height: 400px;
+  background-color: #23272a;
+  position: relative;
+  align-items: center;
+  display: flex;
+}
+
+/* Box Parameters Before and After the action */
+.box::before,
+.box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  background-size: 500%;
+  z-index: -1;
+  transform: scale(1.02);
+}
+
+/* Box Parameter - After the action */
+.box::after {
+  filter: blur(20px);
+}
+
+/* Image Parameters */
+.box img {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 3px solid red;
+  width: 128px;
+  border-radius: 100%;
+  pointer-events: none;
+  position: absolute;
+  left: 235px;
+  top: 20px;
+}
+
+/* Title Parameters */
+.box h1 {
+  position: absolute;
+  left: 200px;
+  top: 140px;
+  animation: flicker 1.5s infinite alternate;
+  color: rgb(255, 0, 0);
+}
+
+/* Description Parameters */
+.box p {
+  position: absolute;
+  left: 200px;
+  top: 200px;
+  animation: flicker 1.5s infinite alternate;
+  color: rgb(255, 0, 0);
+}
+
+/* Hr Parameters */
+.box hr {
+  position: absolute;
+  width: 500px;
+  height: 1px;
+  border: 5px solid rgb(255, 0, 0);
+  border-radius: 10px;
+  top: 270px;
+  left: 50px;
+}
+
+/*.box ul {
+          padding-left: 0px;
+          list-style: none;
+          box-orient: horizontal;
+          box-direction: normal;
+          flex-direction: row;
+          box-align: center;
+          align-items: center;
+          display: flex;
+          margin: 0px;
+        }
+
+        .box ul li {
+          margin: 10px;
+        }
+
+        .box ul li a {
+          color: inherit;
+          text-decoration: none;
+          background-color: var(white);
+          border-radius: 4px;
+          padding: 8px;
+          left: 400px;
+          top: 500px;
+        }
+
+        .box ul li a svg {
+          padding-right: 2.5px;
+        }
+
+        .box ul li a:hover {
+          background: var(black);
+          color: var(red);
+        }*/
+
+/* Responsive Countroldisc */
+@media only screen and (max-width: 1000px) {
+  .box {
+    width: 300px;
+    height: 200px;
+  }
+
+  .box img {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 3px solid red;
+    width: 64px;
+    border-radius: 100%;
+    pointer-events: none;
+    position: absolute;
+    left: 125px;
+    top: 15px;
+  }
+
+  .box h1 {
+    position: absolute;
+    font-size: 120%;
+    left: 105px;
+    top: 85px;
+    animation: flicker 1.5s infinite alternate;
+    color: rgb(255, 0, 0);
+  }
+
+  .box p {
+    position: absolute;
+    left: 65px;
+    top: 110px;
+    animation: flicker 1.5s infinite alternate;
+    color: rgb(255, 0, 0);
+  }
+
+  .box hr {
+    position: absolute;
+    width: 250px;
+    height: 1px;
+    border: 5px solid rgb(255, 0, 0);
+    border-radius: 10px;
+    top: 150px;
+    left: 20px;
+  }
+
+  .box ul {
+    box-orient: vertical;
+    box-direction: normal;
+    direction: column;
+    flex-direction: column;
+  }
+  .box ul li {
+    margin: 10px;
+    width: 100%;
+    background-color: var(white);
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    padding: 12px;
+  }
+  .box ul li a {
+    background: none;
+    box-shadow: none;
+    box-shadow: none;
+  }
+  .box ul li a:hover {
+    background: none;
+    color: var(black);
+  }
+}
+
+/* Responsive */
+@media only screen and (max-height: 512px) {
+  .box ul {
+    box-orient: horizontal !important;
+    box-direction: normal !important;
+    direction: row !important;
+    flex-direction: row !important;
+  }
+  .box ul li {
+    width: 106px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
+
+/* Flickering animation */
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px rgb(151, 6, 6), 0 0 10px rgb(121, 8, 8),
+      0 0 1px rgb(255, 37, 37), 0 0 1px rgb(255, 44, 44), 0 0 1px rgb(255, 0, 0),
+      0 0 10px rgb(255, 0, 0), 0 0 30px rgb(146, 9, 9), 0 0 11px rgb(255, 0, 0);
+  }
+}
