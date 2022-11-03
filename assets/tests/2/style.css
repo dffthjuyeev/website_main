@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f87ff;
+  font-family: "Poppins", sans-serif;
+}
+
+.box {
+  background-color: #fff;
+  padding: 4em 3em;
+  border-radius: 20px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: is all ease;
+}
+
+.pourcent {
+  position: relative;
+}
+
+svg {
+  height: 150px;
+  width: 150px;
+}
+
+svg circle {
+  fill: none;
+  stroke: #1f87ff;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+svg circle:nth-child(1) {
+  stroke: #e0e0e0;
+  stroke-dashoffset: 0;
+}
+
+svg circle:nth-child(2) {
+  animation: circle 2s forwards;
+}
+
+@keyframes circle {
+  to {
+    stroke-dashoffset: 220; /* 440=max | 225=moitié | 110=3/4 | 0=complet*/
+  }
+}
+
+span {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  font-weight: 500;
+  color: #1f87ff;
+}
+
+h1 {
+  margin-top: 20px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
