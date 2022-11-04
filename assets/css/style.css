@@ -12,7 +12,7 @@ body {
   background: #333;
   font-family: Arial, Helvetica, sans-serif;
   height: 100vh;
-  background: url("../ressources/font_website.png");
+  background: url("../ressources/imgs/font_website.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
