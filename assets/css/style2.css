@@ -28,9 +28,8 @@ body {
   font-family: 'Poppins', sans-serif;
   transition: 0.5s;
   text-decoration: none;
-  height: 800px;
+  height: 500px;
   text-align: center;
-  background: rgb(244,67,54)
 }
 /* END Generals Parameters */
 
@@ -42,8 +41,8 @@ body {
     display: block;
     width: 80px;
     height: 40px;
-    top: 80px;
-    left: 1200px;
+    top: 2%;
+    right: 1%;
     border-radius: 160px;
     transition: 0.5s;
     cursor: pointer;
@@ -58,7 +57,7 @@ body {
    left: 0;
    width: 40px;
    height: 40px;
-   background: linear-gradient(to bottom, rgb(244, 67, 54), rgb(244,67,54));
+   background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
    border-radius: 50%;
    transform: scale(0.8);
    box-shadow: 0 8px 40px rgba(0,0,0,0.1),
@@ -78,17 +77,28 @@ body {
 
   /* Navbar Parameters */
 
-  #navbar__logo h1 {
+  h1 {
+    position: relative;
+    top: 300px;
+    font-size: 100px;
+  }
+
+  p {
+    position: relative;
+    top: 310px;
+  }
+
+  #navbar__logo h2 {
     position: absolute;
-    top: 28px;
+    bottom: 35px;
     left: 180px;
-    font-size: 1.5rem;
+    font-size: 1em;
   }
 
   #navbar__logo__img {
     position: absolute;
     left: 50px;
-    top: 15px;
+    bottom: 15px;
     width: 80px;
     height: 80px;
     cursor: pointer;
@@ -110,7 +120,7 @@ body {
   }
 
   #navbar__links { 
-    display: flex;  
+    display: flex;
   }
 
   #navbar__links__a {
@@ -156,7 +166,7 @@ body {
   }
 
   /* Sections Parameters */
-  #myPortfolio {
+  /*#myPortfolio {
     left: 50px;
     position: relative;
     text-align: left;
@@ -175,20 +185,18 @@ body {
 
   #p__link {
     text-decoration: none;
-  }
+  }*/
 
   .medias {
     list-style-type: none;
-    position: absolute;
-    right: 3.3%;
-    top: 50%;
+    position: relative;
     transform: translateY(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  .bulle {
+  .bulle1 {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -200,11 +208,25 @@ body {
     background: #f1f1f1;
     cursor: pointer;
     position: relative;
-    top: 500px
+    top: 335px;
+  }
+
+  .bulle2 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    background: #f1f1f1;
+    cursor: pointer;
+    position: relative;
+    top: 500px;
   }
   
   .logo-medias {
-    position: absolute;
     width: 40px;
     height: 40px;
   }
@@ -243,9 +265,6 @@ body {
       }
 
     /* Navbar Parameters */
-      navbar__logo__img.active {
-        border: 3px solid rgb(255, 255, 255);
-      }
 
       #navbar__logo.active {
         color: white;
