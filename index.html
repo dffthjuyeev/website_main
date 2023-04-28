@@ -1,70 +1,212 @@
-<!--
-    - RENDRE PLUS ATTRACTIVE L'INDEX
-        - ANIMANT LE TITRE [WELCOME] AVEC LA LIBRAIRIE TYPELIGHTERJS
-
--->
+<!-- ANCIENNE PAGE PRINCIPALE -->
 
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="robot" content="index, follow"/>
-    <meta name="keywords" content="onlyspencer"/>
-    <meta property="og:title" content="Arthur alias OnlySpencer"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://onlyspencer.com/"/>
-    <!--<meta property="og:image" content=""/>-->
-    <meta property="og:description" content="Ce site est un test"/>
-    <title>ONLYSPENCER</title>
-    <!--<meta name="description" content=""/>-->
-    <link rel="stylesheet" type="text/css" href="./assets/font/font.css"/>
-    <link rel="stylesheet" type="text/css" href="./style.css"/>
-    <link rel="canonical" href="https://onlyspencer.com/"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/ressources/imgs/avatar.webp"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-lHg5p9gz5Y6iZu6ae3U6eotI2IFf0Bg4ztniQ4f6GSSD9XNSmRHBRVA/Mm7Sx91Fm0oiB++lkkzJj4Q4oBcvDg==" crossorigin="anonymous"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typelighterjs/typelighter.min.js"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <script>alert('Ce site est en pleine configuration ; \n Des bugs peuvent arriver mais seront vites réglés !');</script>
-</head>
-<body>
-    <div class="header">
-        <a href="mailto:arthur@onlyspencer.com"><img src="./assets/img/avatar.ico" id="logo" alt="onlyspencer_icon-logo-onlyspencer"/></a>
+    <style>
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-         <h2><b>OnlySpencer alias Arthurr</b></h2>
+      body {
+        background: #333;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
+        background: url("../img/thumb-1920-456498.jpg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        overflow-x: hidden;
+      }
 
-         <div class="lines">
-            <div id="l1"></div>
-            <div id="l2"></div>
-         </div>
+      .container-first {
+        position: absolute;
+        top: 40%;
+        left: 5%;
+      }
 
-         <div class="social-medias">
-            <a href="https://github.com/onlyspencer" target="_blank"><li class="fab fa-github"></li></a>
-            <a href="https://discord.com/users/490627367526465558" target="_blank"><li class="fab fa-discord"></li></a>
-            <a href="https://instagram.com/arthur_.lvt" target="_blank"><li class="fab fa-instagram"></li></a>
-         </div>
+      h1 {
+        text-transform: uppercase;
+        font-size: 110px;
+        color: #f1f1f1;
+        font-family: Abril fatface, sans-serif;
+      }
+      h1 span {
+        position: relative;
+      }
 
-        <!--<h1><span class="title">Bienvenue !</span></h1>-->
-        <!--<div class="animated_text">
-            <p class="text">
-                Salut, 
-                <span
-                    class="typeWriter"
-                    data-speed="5"
-                    data-end="3000"
-                    data-text='[
-                    "moi c&apos;est Arthur", 
-                    "comment tu vas ?", 
-                    "tu pourra très prochainement retrouver mon portfolio !", 
-                    "merci d&apos;être passé ! :D"
-                    ]'
-                ></span>
-            </p>-->
-        </div>
-    </hr>
+      .container-btns {
+        position: relative;
+        top: 50px;
+      }
+      .btn-first {
+        border: 2px solid #f1f1f1;
+        outline: none;
+        background: transparent;
+        font-size: 30px;
+        padding: 20px;
+        width: 300px;
+        color: #f1f1f1;
+        cursor: pointer;
+      }
+      .btn-first:nth-child(1) {
+        margin-right: 30px;
+      }
+      .btn-first:hover {
+        transition: all 0.3s ease-in-out;
+        background: #f1f1f1;
+        color: #333;
+      }
+      .lignes {
+        position: absolute;
+        top: 6%;
+        left: 5%;
+      }
+      .l1 {
+        width: 250px;
+        height: 3px;
+        background: #f1f1f1;
+        border-radius: 5px;
+      }
+      .l2 {
+        width: 140px;
+        height: 3px;
+        background: #f1f1f1;
+        border-radius: 5px;
+        position: relative;
+        top: 20px;
+      }
+
+      .logo {
+        position: absolute;
+        right: 2.9%;
+        top: 4%;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 100%;
+      }
+      .medias {
+        list-style-type: none;
+        position: absolute;
+        right: 3.3%;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .bulle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 1px solid #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        background: #f1f1f1;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .logo-medias {
+        width: 40px;
+        height: 40px;
+      }
+
+      /*responsive*/
+      @media (max-width: 767px) {
+        .footer-col {
+          width: 50%;
+          margin-bottom: 30px;
+        }
+      }
+      @media (max-width: 574px) {
+        .footer-col {
+          width: 100%;
+        }
+      }
+
+      @media only screen and (max-width: 1000px) {
+        h1 {
+          margin-bottom: 1px;
+        }
+        h1 span {
+          top: -20px;
+          font-size: 50px;
+        }
+        .logo {
+          margin: 2px;
+        }
+        .medias {
+          top: 50%;
+        }
+        .container-first {
+          top: 10%;
+        }
+        #b1 {
+          padding: 10px;
+          width: 250px;
+          bottom: 200px;
+          margin-bottom: 50px;
+          top: 500px;
+        }
+        #b2 {
+          padding: 10px;
+          width: 250px;
+        }
+      }
+
+      @media only screen and (max-height: 512px) {
+        .logo {
+          right: 110px;
+        }
+        #b1 {
+          padding: 10px;
+          width: 220px;
+        }
+        #b2 {
+          padding: 10px;
+          width: 220px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lignes">
+      <div class="l1"></div>
+      <div class="l2"></div>
     </div>
-</body>
+
+    <div class="container-first">
+      <h1><span>WELCOME</span></h1>
+      <div class="container-btns">
+        <button class="btn-first" id="b1" onclick="window.location.href='https://www.onlyspencer.tk';">Accueil</button>
+        <button class="btn-first" id="b2" onclick="window.location.href='https://www.onlyspencer.tk/discord';">Discord</button>
+      </div>
+    </div>
+
+    <img src="../img/avatar.webp" class="logo" alt="onlyspencer_icon-logo-onlyspencer"/>
+
+    <ul class="medias">
+      <li class="bulle">
+        <img src="../img/github.svg" class="logo-medias" onclick="window.location.href='https://github.com/onlyspencer';"/>
+      </li>
+      <li class="bulle">
+        <img src="../img/insta.svg"class="logo-medias" onclick="window.location.href='https://www.instagram.com/arthur_.lvt/?hl=fr';"/>
+      </li>
+    </ul>
+  </body>
 </html>
