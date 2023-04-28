@@ -1,65 +1,71 @@
+<!--
+    - RENDRE PLUS ATTRACTIVE L'INDEX
+        - ANIMANT LE TITRE [WELCOME] AVEC LA LIBRAIRIE TYPELIGHTERJS
+
+-->
+
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bienvenue</title>
-    <meta name="description" content="SITE WEB EN MAINTENANCE"/>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/ressources/imgs/avatar.webp">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="robot" content="index, follow"/>
+    <meta name="keywords" content="onlyspencer"/>
+    <meta property="og:title" content="Arthur alias OnlySpencer"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://onlyspencer.com/"/>
+    <!--<meta property="og:image" content=""/>-->
+    <meta property="og:description" content="Ce site est un test"/>
+    <title>ONLYSPENCER</title>
+    <!--<meta name="description" content=""/>-->
+    <link rel="stylesheet" type="text/css" href="./assets/font/font.css"/>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <link rel="canonical" href="https://onlyspencer.com/"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/ressources/imgs/avatar.webp"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-lHg5p9gz5Y6iZu6ae3U6eotI2IFf0Bg4ztniQ4f6GSSD9XNSmRHBRVA/Mm7Sx91Fm0oiB++lkkzJj4Q4oBcvDg==" crossorigin="anonymous"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-  </head>
-  <body>
-    <div class="lignes">
-      <div class="l1"></div>
-      <div class="l2"></div>
+    <script src="https://cdn.jsdelivr.net/npm/typelighterjs/typelighter.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="./alert.js"></script>
+    <!--<script src="./app.js"></script>-->
+</head>
+<body>
+    <div class="header">
+        <a href="mailto:arthur@onlyspencer.com"><img src="./assets/img/avatar.ico" id="logo" alt="onlyspencer_icon-logo-onlyspencer"/></a>
+
+         <h2><b>OnlySpencer alias Arthurr</b></h2>
+
+         <div class="lines">
+            <div id="l1"></div>
+            <div id="l2"></div>
+         </div>
+
+         <div class="social-medias">
+            <a href="https://github.com/onlyspencer" target="_blank"><li class="fab fa-github"></li></a>
+            <a href="https://discord.com/users/490627367526465558" target="_blank"><li class="fab fa-discord"></li></a>
+            <a href="https://instagram.com/arthur_.lvt" target="_blank"><li class="fab fa-instagram"></li></a>
+         </div>
+
+        <!--<h1><span class="title">Bienvenue !</span></h1>-->
+        <!--<div class="animated_text">
+            <p class="text">
+                Salut, 
+                <span
+                    class="typeWriter"
+                    data-speed="5"
+                    data-end="3000"
+                    data-text='[
+                    "moi c&apos;est Arthur", 
+                    "comment tu vas ?", 
+                    "tu pourra très prochainement retrouver mon portfolio !", 
+                    "merci d&apos;être passé ! :D"
+                    ]'
+                ></span>
+            </p>-->
+        </div>
+    </hr>
     </div>
-
-    <div class="container-first">
-      <h1><span>WELCOME</span></h1>
-      <div class="container-btns">
-        <button
-          class="btn-first"
-          id="b1"
-          onclick="window.location.href='https://onlyspencer.com';"
-        >
-          Accueil
-        </button>
-        <button
-          class="btn-first"
-          id="b2"
-          onclick="window.location.href='https://discords.com/bio/p/onlyspencer';"
-        >
-          Discord
-        </button>
-      </div>
-    </div>
-
-    <img
-      src="./assets/ressources/imgs/avatar.webp"
-      class="logo"
-      alt="onlyspencer_icon-logo-onlyspencer"
-    />
-
-    <ul class="medias">
-      <li class="bulle">
-        <img
-          src="./assets/ressources/imgs/github.svg"
-          class="logo-medias"
-          onclick="window.location.href='https://github.onlyspencer.com';"
-        />
-      </li>
-      <li class="bulle">
-        <img
-          src="./assets/ressources/imgs/insta.svg"
-          class="logo-medias"
-          onclick="window.location.href='https://instagram.onlyspencer.com';"
-        />
-      </li>
-    </ul>
-  </body>
+</body>
 </html>
