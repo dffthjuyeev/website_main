@@ -1,128 +1,173 @@
-body::before {
-  content: "";
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-image: url("./assets/img/thumb-1920-456498.jpg.png");
-  filter: brightness(0.5) blur(5px);
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: #333;
-  background-image: url("./assets/img/thumb-1920-456498.jpg.png");
+  background: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  background: url("../img/thumb-1920-456498.jpg.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   overflow-x: hidden;
-  border-radius: 100%;
+}
+
+.container-first {
   position: absolute;
+  top: 40%;
+  left: 5%;
 }
 
-
-.header #logo {
-  position: relative;
-  top: 30px;
-  left: 50px;
-  width: 80px;
-  height: 80px;
-  cursor:pointer;
-  border: 3px solid rgb(255, 255, 255);
-  border-radius: 100%;
-  margin: 0px;
-}
-
-.header h2 {
-  font-family: 'Trispace', sans-serif;
-  font-weight: normal;
-  color: white;
-  position: relative;
-  top: -50px;
-  left: 170px;
-  margin: 0px;
-}
-
-.header .lines {
-  position: relative;
-}
-
-.header .lines #l1 {
-  background: #f1f1f1;
-  border-radius: 5px;
-  position: relative;
-  width: 250px;
-  height: 3px;
-  left: 1100px;
-  top: -50px;
-}
-
-.header .lines #l2 {
-  background: #f1f1f1;
-  border-radius: 5px;
-  position: relative;
-  width: 140px;
-  height: 3px;
-  left: 1100px;
-  top: -30px;
-}
-
-.header .social-medias {
-  position: absolute;
-  display: flex;
-  cursor: pointer;
-  left: 170px;
-  top: 85px;
-  
-}
-
-.header .social-medias li {
-  font-size: 32px;
-  margin-right: 15px;
-  color:white;
-}
-
-/*
-.header .social-medias li {
-  font-size: 32px;
-  color: white;
-  cursor:pointer;
-  margin-right: 15px;
-  padding: 5px;
-  width: 20px;
-  top: -45px;
-  left: 180px;
-}
-*/
-
-
-
-.header span.title {
-  position: relative;
-}
-
-.header h1 {
-  font-family: 'Trispace', sans-serif;
-  font-weight: Bold;
+h1 {
+  text-transform: uppercase;
   font-size: 110px;
   color: #f1f1f1;
+  font-family: Abril fatface, sans-serif;
+}
+h1 span {
   position: relative;
-  left: 50px;
 }
 
-.animated_text p.text {
+.container-btns {
   position: relative;
-  font-family: 'Trispace', sans-serif;
-  font-weight: Bold;
-  font-size: 32px;
-  color: white;
+  top: 50px;
+}
+.btn-first {
+  border: 2px solid #f1f1f1;
+  outline: none;
+  background: transparent;
+  font-size: 30px;
+  padding: 20px;
+  width: 300px;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+.btn-first:nth-child(1) {
+  margin-right: 30px;
+}
+.btn-first:hover {
+  transition: all 0.3s ease-in-out;
+  background: #f1f1f1;
+  color: #333;
+}
+.lignes {
+  position: absolute;
+  top: 6%;
+  left: 5%;
+}
+.l1 {
+  width: 250px;
+  height: 3px;
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+.l2 {
+  width: 140px;
+  height: 3px;
+  background: #f1f1f1;
+  border-radius: 5px;
+  position: relative;
+  top: 20px;
 }
 
-.animated_text span.typeWriter {
+.logo {
+  position: absolute;
+  right: 2.9%;
+  top: 4%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 100%;
+}
+.medias {
+  list-style-type: none;
+  position: absolute;
+  right: 3.3%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.bulle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  background: #f1f1f1;
+  cursor: pointer;
   position: relative;
-  font-family: 'Trispace', sans-serif;
-  font-weight: Bold;
-  font-size: 32px;
-  color: white;
+}
+
+.logo-medias {
+  width: 40px;
+  height: 40px;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  h1 {
+    margin-bottom: 1px;
+  }
+  h1 span {
+    top: -20px;
+    font-size: 50px;
+  }
+  .logo {
+    margin: 2px;
+  }
+  .medias {
+    top: 50%;
+  }
+  .container-first {
+    top: 10%;
+  }
+  #b1 {
+    padding: 10px;
+    width: 250px;
+    bottom: 200px;
+    margin-bottom: 50px;
+    top: 500px;
+  }
+  #b2 {
+    padding: 10px;
+    width: 250px;
+  }
+}
+
+@media only screen and (max-height: 512px) {
+  .logo {
+    right: 110px;
+  }
+  #b1 {
+    padding: 10px;
+    width: 220px;
+  }
+  #b2 {
+    padding: 10px;
+    width: 220px;
+  }
 }
