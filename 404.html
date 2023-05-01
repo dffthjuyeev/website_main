@@ -1,67 +1,102 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie-edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./assets/css/fonts.css" rel="stylesheet" />
-  </head>
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="robot" content="index, follow"/>
+    <meta name="keywords" content="onlyspencer"/>
+    <meta property="og:title" content="Arthur alias OnlySpencer"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://onlyspencer.com/"/>
+    <!--<meta property="og:image" content=""/>-->
+    <meta property="og:description" content="Ce site est un test"/>
+    <title>ONLYSPENCER</title>
+    <!--<meta name="description" content=""/>-->
+    <link rel="stylesheet" type="text/css" href="./assets/font/font.css"/>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <link rel="canonical" href="https://onlyspencer.com/"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/ressources/imgs/avatar.webp"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-lHg5p9gz5Y6iZu6ae3U6eotI2IFf0Bg4ztniQ4f6GSSD9XNSmRHBRVA/Mm7Sx91Fm0oiB++lkkzJj4Q4oBcvDg==" crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typelighterjs/typelighter.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <!--<script>alert('Ce site est en pleine configuration ; \n Des bugs peuvent arriver mais seront vites réglés !');</script>-->
+</head>
   <body>
-    <h1>Error 404</h1>
-    <h2>
-      Did you get lost along the way ? You can return to
-      <a href="https://onlyspencer.com/">main page</a> :D
-    </h2>
-
+    <div class="box">
+      <h1>Error 404</h1>
+      <h2>
+        Did you get lost along the way ? You can return to ‎
+        <a href="https://onlyspencer.com/">main page</a>‎ :D
+      </h2>
+    </div>
     <style>
+      *,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
       body {
         background: #23272a;
         height: 100vh;
         font-family: "Space Grotesk", sans-serif;
-        display: flex;
-        align-items: center;
       }
 
-      h1 {
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Ajout de cette propriété */
+        height: 100%;
+      }
+
+      .box h1 {
         color: white;
         font-size: 500%;
-        position: absolute;
-        top: 70px;
-        left: 520px;
+        margin-top: 10px;
+        text-align: center;
       }
 
-      h2 {
+      .box h2 {
         color: white;
-        position: absolute;
-        left: 320px;
-        top: 220px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin-top: 10px;
       }
 
       a {
         text-decoration: none;
         color: #007bff;
+        display: flex;
+        justify-content: center;
+        text-align: center;
       }
 
       /* Responsive Parameters */
-      @media only screen and (max-width: 1000px) and (max-width: 1000px) {
-        h1 {
-          left: 150px;
-          top: 20px;
-          font-size: 90px;
-        }
+      /*@media only screen and (max-width: 1000px) and (max-width: 1000px) {
+    h1 {
+      left: 150px;
+      top: 20px;
+      font-size: 90px;
+    }
 
-        h2 {
-          left: 20px;
-          font-size: 60px;
-        }
-      }
+    h2 {
+      left: 20px;
+      font-size: 60px;
+    }
+  }
 
-      @media only screen and (max-height: 512px) {
-        h1 {
-          left: 15px;
-          font-size: 12px;
-        }
-      }
+  @media only screen and (max-height: 512px) {
+    h1 {
+      left: 15px;
+      font-size: 12px;
+    }
+  }*/
     </style>
   </body>
 </html>
