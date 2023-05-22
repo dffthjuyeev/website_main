@@ -2,48 +2,67 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="robot" content="noindex, nofollow"/>
-        <meta name="keywords" content="page, snt"/>
-        <meta property="og:title" content="MaPage de SNT"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://snt.onlyspencer.com"/>
-        <meta property="og:description" content="Page de SNT"/>
-        <!--<meta property="og:image" content=""/>-->
-        <title>MaPageSNT</title>
-        <link rel="stylesheet" type="text/css" href="./assets/font/font.css"/>
-    <link rel="stylesheet" type="text/css" href="./assets/tests/snt/style.css"/>
-        <link rel="canonical" href="https://onlyspencer.com/"/>
-        <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/avatar1.webp"/>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-lHg5p9gz5Y6iZu6ae3U6eotI2IFf0Bg4ztniQ4f6GSSD9XNSmRHBRVA/Mm7Sx91Fm0oiB++lkkzJj4Q4oBcvDg==" crossorigin="anonymous"/>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/typelighterjs/typelighter.min.js"></script>
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-        <script>alert('Cette page est pour un devoir ; Elle n\'a donc pas d\'importance !');</script>
-    </head>
-    <body>
-        <section class="container">
-            <div class="header">
-                <!--<h1>./Hello World!</h1>-->
-                <p>
-                    <span
-                      class="typeWriter"
-                      data-speed="5"
-                      data-end="3000"
-                      data-text='["./Hello World!", "How are you ?"]'
-                    ></span>
-                  </p> 
-                  
-                  <div class="social-medias">
-                    <a href="https://github.onlyspencer.com/" target="_blank"><li class="fab fa-github"></li></a>
-                    <a href="https://discord.onlyspencer.com/" target="_blank"><li class="fab fa-discord" id="discord"></li></a>
-                    <a href="https://insta.onlyspencer.com/" target="_blank"><li class="fab fa-instagram"></li></a>
-                  </div>
-            </div>
-        </section>
-    </body>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="robot" content="noindex, nofollow"/>
+    <meta name="keywords" content="page, snt"/>
+    <meta property="og:title" content="MaPage de SNT"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://snt.onlyspencer.com"/>
+    <meta property="og:description" content="Page de SNT"/>
+    <!--<meta property="og:image" content=""/>-->
+    <title>MaPageSNT</title>
+    <link rel="stylesheet" type="text/css" href="../../font/font.css"/>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <link rel="canonical" href="https://onlyspencer.com/"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../img/avatar1.webp"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-lHg5p9gz5Y6iZu6ae3U6eotI2IFf0Bg4ztniQ4f6GSSD9XNSmRHBRVA/Mm7Sx91Fm0oiB++lkkzJj4Q4oBcvDg==" crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typelighterjs/typelighter.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script>alert('Cette page est pour un devoir ; Elle n\'a donc pas d\'importance !');</script>
+  </head>
+  <body>
+    <section class="container">
+      <div id="comming__soon">
+        <p id="title">
+          <span
+            class="typeWriter"
+            data-speed="5"
+            data-end="3000"
+            data-text='["./Hello World!", "How are you ?"]'
+          ></span>
+        </p>
+      </div>
+      <div id="social__medias">
+        <a href="https://github.onlyspencer.com/" target="_blank"><li class="fab fa-github" id="medias1"></li></a>
+        <a href="https://discord.onlyspencer.com/" target="_blank"><li class="fab fa-discord" id="medias2"></li></a>
+        <a href="https://insta.onlyspencer.com/" target="_blank"><li class="fab fa-instagram" id="medias3"></li></a>
+      </div>
+  
+      <!-- Dark and Light mod -->
+      <div id="toggle"><i class="indicator"></i></div>
+      <!-- <div id="allText"><h1>Test</h1></div>---->
+    </section>
+
+    <script>
+      toggle.onclick = function () {
+        const body = document.querySelector("body");
+          body.classList.toggle("active");
+        const toggle = document.getElementById("toggle");
+          toggle.classList.toggle("active");
+        const title = document.getElementById("title");
+          title.classList.toggle("active");
+        const medias1 = document.getElementById("medias1");
+          medias1.classList.toggle("active");
+        const medias2 = document.getElementById("medias2");
+          medias2.classList.toggle("active");  
+        const medias3 = document.getElementById("medias3");
+          medias3.classList.toggle("active");
+      };
+    </script>
+  </body>
 </html>
