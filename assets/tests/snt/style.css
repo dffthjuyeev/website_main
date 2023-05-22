@@ -1,49 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+/* Variables */
+:root {
+  --font-size: 1rem;
+}
+.light-mode {
+  --navbar-color: #222;
+  --navbar-bg-color: #f0f0f0;
+}
+.dark-mode {
+  --navbar-color: #fff;
+  --navbar-bg-color: #000;
+}
+
+/* Generals Parameters */
 * {
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background: black;
-    height: 100vh;
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  transition: 0.5s;
+  text-decoration: none;
+  height: 500px;
+  text-align: center;
+}
+/* END Generals Parameters */
+
+/* Parameters (Before activation) */
+
+/* Toggle Parameters */
+#toggle {
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 40px;
+  top: 2%;
+  right: 1%;
+  border-radius: 160px;
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+    inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 8px rgba(0, 0, 0, 0.05);
 }
 
-.header {
-    display: flex;
-    flex-direction:column ;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+#toggle .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+  border-radius: 50%;
+  transform: scale(0.8);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1),
+    inset 0 4px 4px rgba(255, 255, 255, 0.1),
+    inset 0 -4px 4px rgba(255, 255, 255, 0.1);
+
+  /* (244,67,54) */
+  transition: 0.5s;
+}
+/* END Toggle Parameters */
+
+/* Navbar Parameters */
+
+#title {
+  position: relative;
+  top: 300px;
+  font-size: 100px;
+  color: black;
 }
 
-.header h1 {
-    left: 500px;
-    color: #00FF00;
-    font-family: 'Trispace', sans-serif;
-    font-weight: Bold;
-    font-size: 100px;
+#social__medias {
+  cursor: pointer;
 }
 
-.header p {
-    left: 500px;
-    color: #00FF00;
-    font-family: 'Trispace', sans-serif;
-    font-weight: Bold;
-    font-size: 100px;
-    text-align: center;
+#social__medias li {
+  font-size: 50px;
+  margin-top: 15px;
+  color: black;
 }
 
-.social-medias {
-    cursor: pointer;
+#social__medias #medias2 {
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
-.social-medias li {
-    font-size: 50px; 
-    margin-top: 15px;
-    color: white;
+/* Parameters (After activation) */
+
+/* Toggle Parameters */
+body.active {
+  color: white;
+  background: black;
+  transition: 0.5s;
 }
 
-.social-medias #discord {
-    margin-left: 100px;
-    margin-right: 100px;
+#toggle.active {
+  background: #222;
+  box-shadow: 0 8px 60px rgba(0, 0, 0, 0.1), inset 0 8px 8px rgba(0, 0, 0, 0.1),
+    inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+}
+
+#toggle.active .indicator {
+  left: 40px;
+  background: linear-gradient(to bottom, #444, #222);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+    inset 0 4px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+}
+
+#title.active {
+  color: #00ff00;
+}
+
+#medias1.active {
+  color: white;
+}
+
+#medias2.active {
+  color: white;
+}
+
+#medias3.active {
+  color: white;
+}
+
+/* END Toggle Parameters */
+/* END Light and Dark Mod Parameters */
+
+/* Responsive Parameters */
+@media screen and (max-width: 530px) {
+
+}
+
+/*  Medium device - Bonus */
+@media screen and (min-width: 768px) {
 }
