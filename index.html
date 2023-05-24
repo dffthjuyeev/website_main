@@ -36,25 +36,6 @@
       <h1>Coming Soon...</h1>
       <p><i>This website will be coming soon...</i></p>
     </div>
-    <script>
-      function toggleMenu() {
-        const navbar = document.querySelector(".navbar");
-        const burger = document.querySelector(".burger");
-        const navbarLinks = document.querySelectorAll(".navbar a");
-
-        burger.addEventListener("click", (e) => {
-          navbar.classList.toggle("show-nav");
-        });
-
-        navbarLinks.forEach((link) => {
-          link.addEventListener("click", (e) => {
-            navbar.classList.toggle("show-nav");
-          });
-        });
-      }
-      toggleMenu();
-    </script>
-    <!-- End Navbar -->
 
     <!-- Dark and Light mod -->
     <div id="toggle"><i class="indicator"></i></div>
