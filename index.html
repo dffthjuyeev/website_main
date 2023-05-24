@@ -1,55 +1,93 @@
-<!-- ANCIENNE PAGE PRINCIPALE -->
-
 <!DOCTYPE html>
-<html lang="fr">
-<head>
+<html lang="en">
+  <head>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--<meta http-equiv="refresh" content="0; url='https://discord.com/users/490627367526465558/'"/>-->
     <meta name="robot" content="index, follow"/>
-    <meta name="keywords" content="onlyspencer"/>
-    <meta property="og:title" content="Arthur alias OnlySpencer"/>
+    <meta name="keywords" content="page, snt"/>
+    <meta property="og:title" content="Coming soon"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://onlyspencer.com/"/>
+    <meta property="og:url" content="https://snt.onlyspencer.com"/>
+    <meta property="og:description" content="Page d'accueil"/>
     <!--<meta property="og:image" content=""/>-->
-    <meta property="og:description" content="Ce site est un test"/>
-    <title>ONLYSPENCER</title>
-    <!--<meta name="description" content=""/>-->
+    <title>MaPageSNT</title>
     <link rel="stylesheet" type="text/css" href="./assets/font/font.css"/>
     <link rel="stylesheet" type="text/css" href="./style.css"/>
     <link rel="canonical" href="https://onlyspencer.com/"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/ressources/imgs/avatar.webp"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/avatar1.webp"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-lHg5p9gz5Y6iZu6ae3U6eotI2IFf0Bg4ztniQ4f6GSSD9XNSmRHBRVA/Mm7Sx91Fm0oiB++lkkzJj4Q4oBcvDg==" crossorigin="anonymous"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typelighterjs/typelighter.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <meta http-equiv="refresh" content="0; url='https://discord.com/users/490627367526465558/'"/>
-    <!--<script>alert('Ce site est en pleine configuration ; \n Des bugs peuvent arriver mais seront vites réglés !');</script>-->
-</head>
-  <body style="background-color: black;">
-    <!--<div class="lignes">
-      <div class="l1"></div>
-      <div class="l2"></div>
+    <script>alert('Cette page est pour un devoir ; Elle n\'a donc pas d\'importance !');</script>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar__logo">
+      <h2><i>Copyright © OnlySpencer 2022/2023 . All Rights Reserved</i></h2>
+      <a href="discord://-/users/490627367526465558" target="_blank"><img src="./assets/img/avatar.webp" class="logo" id="navbar__logo__img" alt="onlyspencer_icon-logo-onlyspencer"/></a>
     </div>
-
-    <div class="container-first">
-      <h1><span>WELCOME</span></h1>
-      <div class="container-btns">
-        <button class="btn-first" id="b1" onclick="window.location.href='https://www.onlyspencer.tk';">Accueil</button>
-        <button class="btn-first" id="b2" onclick="window.location.href='https://www.onlyspencer.tk/discord';">Discord</button>
-      </div>
+    <div class="comming__soon">
+      <h1>Coming Soon...</h1>
+      <p><i>This website will be coming soon...</i></p>
     </div>
+    <script>
+      function toggleMenu() {
+        const navbar = document.querySelector(".navbar");
+        const burger = document.querySelector(".burger");
+        const navbarLinks = document.querySelectorAll(".navbar a");
 
-    <img src="../img/avatar.webp" class="logo" alt="onlyspencer_icon-logo-onlyspencer"/>
+        burger.addEventListener("click", (e) => {
+          navbar.classList.toggle("show-nav");
+        });
 
-    <ul class="medias">
-      <li class="bulle">
-        <img src="../img/github.svg" class="logo-medias" onclick="window.location.href='https://github.com/onlyspencer';"/>
-      </li>
-      <li class="bulle">
-        <img src="../img/insta.svg"class="logo-medias" onclick="window.location.href='https://www.instagram.com/arthur_.lvt/?hl=fr';"/>
-      </li>
-    </ul>-->
+        navbarLinks.forEach((link) => {
+          link.addEventListener("click", (e) => {
+            navbar.classList.toggle("show-nav");
+          });
+        });
+      }
+      toggleMenu();
+    </script>
+    <!-- End Navbar -->
+
+    <!-- Dark and Light mod -->
+    <div id="toggle"><i class="indicator"></i></div>
+    <!-- <div id="allText"><h1>Test</h1></div>---->
+
+    <script>
+      toggle.onclick = function () {
+        const body = document.querySelector("body");
+        body.classList.toggle("active");
+        const toggle = document.getElementById("toggle");
+        toggle.classList.toggle("active");
+        /* const text = document.getElementById('allText');
+                text.classList.toggle('active');*/
+        const navbar__logo = document.getElementById("navbar__logo");
+        navbar__logo.classList.toggle("active");
+
+        const navbar__logo__img = document.getElementById("navbar__logo__img");
+        navbar__logo__img.classList.toggle("active");
+
+        // const navbars = document.querySelector('.navbar');
+
+        const navbar__links__a = document.getElementById("navbar__links__a");
+        navbar__links__a.classList.toggle("active");
+
+        const navbar__links__b = document.getElementById("navbar__links__b");
+        navbar__links__b.classList.toggle("active");
+
+        const navbar__links__c = document.getElementById("navbar__links__c");
+        navbar__links__c.classList.toggle("active");
+
+        const navbar__links__d = document.getElementById("navbar__links__d");
+        navbar__links__d.classList.toggle("active");
+
+        const navbar__links__e = document.getElementById("navbar__links__e");
+        navbar__links__e.classList.toggle("active");
+      };
+    </script>
   </body>
 </html>
