@@ -96,7 +96,7 @@ body {
 /* Toggle Parameters */
 body.active {
   color: white;
-  background: black;
+  background: url('https://cms.doctorwho.tv/sites/default/files/2022-02/2fy700000001000.jpg');
   transition: 0.5s;
 }
 
