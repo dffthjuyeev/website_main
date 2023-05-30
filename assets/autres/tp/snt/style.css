@@ -98,6 +98,7 @@ body.active {
   color: white;
   background: url('https://merchandise.thedoctorwhosite.co.uk/wp-content/uploads/backgorund-3.jpg');
   transition: 1s;
+  filter : brightness(0.5);
 }
 
 #toggle.active {
