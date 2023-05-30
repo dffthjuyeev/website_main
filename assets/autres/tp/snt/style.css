@@ -96,7 +96,7 @@ body {
 /* Toggle Parameters */
 body.active {
   color: white;
-  background: url('https://merchandise.thedoctorwhosite.co.uk/wp-content/uploads/backgorund-3.jpg') brightness(0.5);
+  background: url('https://merchandise.thedoctorwhosite.co.uk/wp-content/uploads/backgorund-3.jpg');
   transition: 1s;
   background-repeat: none;
 }
