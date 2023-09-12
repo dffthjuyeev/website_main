@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="onlyspencer" />
+  <meta name="description" content="Hello you !" />
+  <meta property="og:title" content="Arthur alias OnlySpencer" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://onlyspencer.com" />
+  <meta property="og:image" content="https://onlyspencer.com/assets/img/avatar.webp" />
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <link rel="stylesheet" type="text/css" href="" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-lHg5p9gz5Y6iZu6ae3U6eotI2IFf0Bg4ztniQ4f6GSSD9XNSmRHBRVA/Mm7Sx91Fm0oiB++lkkzJj4Q4oBcvDg==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" />
+  <link rel="canonical" href="https://onlyspencer.com/" />
+  <link rel="icon" type="image/png" sizes="16x16" href="" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typelighterjs/typelighter.min.js"></script>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <script src="./script.js"></script>
+  <!--<script>alert('Ce site est en pleine configuration ; \n Des bugs peuvent arriver mais seront vites réglés !');</script>-->
+</head>
+
+<body>
+  <!-- Header Tab --------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <header>
+    <h1>OnlySpencer</h1>
+    <div class="buttons_nav">
+      <a href="./about.html"><button class="button" id="btn1"><b>A Propos</b></button></a>
+      <button class="button" id="btn2" onclick="scrollToSection('myprojects')"><b>Projets</b></button>
+      <button class="button" id="btn3" onclick="scrollToSection('myskills')"><b>Compétences</b></button>
+    </div>
+  </header>
+  <!-- END of Header Tab --------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+  <!-- Aboutme Tab --------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <div class="aboutme" id="aboutme">
+    <div class="box_aboutme">
+      <div class="content_box_aboutme">
+        <p class="text_abtme"><b>Hello World !</b> </br></br> Moi c'est Arthur alias OnlySpencer, un jeune </br>
+          développeur de lycée qui aime découvrir différents langages </br>
+          selon ce que je veux faire. J'ai déjà découvert le </br>
+          front-end dans le monde du web et je me suis mis </br>
+          récemment à la programmation d'applications Android...</br>
+        </br></br><a href="./about.html"><button class="learnmore"><b>EN SAVOIR PLUS ></b></button></a></p>
+      </div>
+    </div>
+  </div>
+  <!-- END of Aboutme Tab --------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+  <!-- My Projects Tab --------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <div class="myprojects" id="myprojects">
+    <h1 class="title-myprojects">Mes Projets<i class="fas fa-hashtag button-icon" alt="Button #"id="button-h1_myprojects" onclick="scrollToSection('myprojects')"></i></h1>
+    <div class="myproject-card" id="card1" onclick="handleCardClick('card1')">
+      <h3>Expériences Professionnelles</h3>
+      <img src="./assets/img/workin_logo.png" id="img_card1" alt="Logo Monde Pro"/>
+      <p class="description">Il y a un an, j'ai participé à un stage professionnel </br>qui m'a amené à découvrir encore plus le front-end [...] </p>
+    </div>
+    <div class="myproject-card" id="card2" onclick="handleCardClick('card2')">
+      <h3>Discord.py</h3>
+      <img src="./assets/img/download.png" id="img_card2" alt="Logo Discord.py">
+      <p>L'an dernier, j'ai décidé de m'amuser à créer un bot </br> Discord avec Python, c'était assez intéréssant ! [...]</p>
+    </div>
+    <div class="myproject-card" id="card3" onclick="handleCardClick('card3')">
+      <h3>Découverte</h3>
+      <img src="./assets/img/code_logo.png" id="img_card3" alt="Logo Programmation">
+      <p>Depuis mes débuts, en 2019, j'aime découvrir de </br> nouveaux langages et problématiques associées [...]</p>
+    </div>
+  </div>
+  <!-- END of My Projects Tab --------------------------------------------------------------------------------------------------------------------------------------------------------->
+    
+  <!-- My Skills Tab --------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <div class="skills" id="myskills">
+    <h1 class="title-skills">Mes Compétences <i class="fas fa-hashtag" onclick="scrollToSection('myskills')"></i></h1>
+    <div class="cards">
+      <div class="box_card" id="html">
+        <div class="text_box_card">
+          <svg>
+            <circle cx="70px" cy="70px" r="70px" id="html"></circle>
+            <circle cx="70px" cy="70px" r="70px"></circle>
+          </svg>
+          <span><strong>75%</strong></span>
+        </div>
+        <h1 class="titp le_box_card">HTML</h1>
+      </div>
+      <div class="box_card" id="css">
+        <div class="text_box_card">
+          <svg>
+            <circle cx="70px" cy="70px" r="70px" id="html"></circle>
+            <circle cx="70px" cy="70px" r="70px"></circle>
+          </svg>
+          <span><strong>55%</strong></span>
+        </div>
+        <h1 class="title_box_card">CSS</h1>
+      </div>
+      <div class="box_card" id="php">
+        <div class="text_box_card">
+          <svg>
+            <circle cx="70px" cy="70px" r="70px" id="html"></circle>
+            <circle cx="70px" cy="70px" r="70px"></circle>
+          </svg>
+          <span><strong>10%</strong></span>
+        </div>
+        <h1 class="title_box_card">PHP</h1>
+      </div>
+      <div class="box_card" id="csharp">
+        <div class="text_box_card">
+          <svg>
+            <circle cx="70px" cy="70px" r="70px" id="html"></circle>
+            <circle cx="70px" cy="70px" r="70px"></circle>
+          </svg>
+          <span><strong>10%</strong></span>
+        </div>
+        <h1 class="title_box_card">C#</h1>
+      </div>
+    </div>
+  </div>
+  <!-- END of My Skills Tab --------------------------------------------------------------------------------------------------------------------------------------------------------->
+  
+  <!-- Footer Tab --------------------------------------------------------------------------------------------------------------------------------------------------------->
+  <footer>
+    <div class="footer-content">
+      <p><b><i>Je tiens a dire que ce site internet est en pleine construction, rien n'est encore terminé !!</i></b></p>
+      <div class="social-links">
+        <a href="https://instagram.com/arthur_.lvt/" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://github.com/OnlySpencer/" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://dev.to/arthurlvt" target="_blank"><i class="fa fa-dev-to"></i></a>
+        <a class="privacybtn" href="https://onlyspencer.com/privacy-policy" target="_blank">Confidentialité</a>
+        ·
+        <a class="termsbtn" href="https://onlyspencer.com/terms-of-use" target="_blank">Conditions d'utilisation</a>
+      </div>
+    </div>
+  </footer>
+  <!-- END of Footer Tab --------------------------------------------------------------------------------------------------------------------------------------------------------->
+</body>
+</html>
