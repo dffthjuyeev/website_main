@@ -1,0 +1,446 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  transition: 0.5s;
+  user-select: none;
+}
+
+/* Toggle Parameters */
+#toggle {
+  position: absolute;
+  /* Ajoutez cette déclaration */
+  display: block;
+  top: 10px;
+  /* Place le bouton en haut de la barre de navigation */
+  width: 80px;
+  height: 40px;
+  top: 50%;
+  /* Ajoutez cette déclaration */
+  left: 3%;
+  transform: translateY(-50%);
+  /* Ajoutez cette déclaration */
+  border-radius: 160px;
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: inset 0 2px 60px rgba(0, 0, 0, 0.1),
+    inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#toggle .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+  border-radius: 50%;
+  transform: scale(0.8);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1),
+    inset 0 4px 4px rgba(255, 255, 255, 0.1),
+    inset 0 -4px 4px rgba(255, 255, 255, 0.1);
+
+  transition: 0.5s;
+}
+#toggle.active .indicator {
+  left: 40px;
+  background: linear-gradient(to bottom, #444, #222);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
+    inset 0 4px 4px rgba(255, 255, 255, 0.2),
+    inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+  transition: 0.5s;
+}
+
+#navbar {
+  align-items: center;
+  padding: 30px 5%;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: background-color 0.5s, padding 0.3s, box-shadow 0.3s;
+  position: fixed; /* Fixe la navbar en haut */
+  width: 95%;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+#navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px 5%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+#navbar.active {
+  background-color: rgba(34, 34, 34, 0.85);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+#navbar.active.scrolled {
+  background-color: rgba(34, 34, 34, 0.5);
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  color: #000000;
+  transition: 0.5s;
+}
+
+#writer {
+  transition: 0.5s;
+}
+#writer.active {
+  color: white;
+  transition: 0.5s;
+}
+
+header #info-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  height: 100vh;
+
+  user-select: none;
+  background-color: #ffffff;
+  transition: 0.5s;
+}
+#info-text.active {
+  background-color:#222;
+  transition: 0.5s;
+}
+
+header #info-text h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  font-family: "Nunito";
+  font-weight: bold;
+  user-select: none;
+  color: rgb(0, 0, 0);
+  transition: 0.5s;
+}
+#h1_header.active {
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  15%,
+  45% {
+    opacity: 1;
+  }
+
+  60% {
+    box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.1);
+    opacity: 0;
+  }
+}
+
+#about,
+#projects,
+#myskills {
+  background-color: #ffffff;
+  padding: 40px;
+  transition: 0.5s;
+}
+
+#about.active,
+#projects.active {
+  background-color: #222;
+}
+
+#about .card:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+#about .header,
+#projects .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#about .header h1,
+#projects .header h1 {
+  text-align: center;
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+
+#title_card1_projects,
+#title_card2_projects,
+#title_card3_projects,
+#title_card4_projects,
+#title_card5_projects,
+#title_card6_projects {
+  color: red;
+  transition: 0.5s;
+}
+
+#title_about.active,
+#title_card_aboutme.active,
+#text_card_aboutme.active,
+#title_header_projects.active,
+#title_card1_projects.active,
+#text_card1_projects.active,
+#title_card2_projects.active,
+#text_card2_projects.active,
+#title_card3_projects.active,
+#text_card3_projects.active,
+#title_card4_projects.active,
+#text_card4_projects.active,
+#title_card5_projects.active,
+#text_card5_projects.active,
+#title_card6_projects.active,
+#text_card6_projects.active {
+  color: white;
+  transition: 0.5s;
+}
+
+#hashtag_myprojects_h1,
+#hashtag_about_h1 {
+  cursor: pointer;
+}
+
+#about .header a,
+#projects .header a {
+  text-decoration: none;
+  font-size: 1.3em;
+  border: 1px solid transparent;
+  padding: 10px 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  transition: 0.5s;
+}
+
+#about .card,
+#projects .card {
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#about .card:hover,
+#projects .card:hover {
+  border-color: #000000;
+  box-shadow: none;
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+#about.active .card:hover,
+#projects.active .card:hover {
+  border-color: #ffffff;
+}
+
+#about .card img {
+  max-width: 200px;
+  max-height: 200px;
+  user-select: none;
+}
+
+#about .card .info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#about .card .info h1,
+#projects .card .info h1 {
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  transition: 0.5s;
+}
+
+#about .card .info p,
+#projects .card .info p {
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+
+
+#hashtag_about_h1,
+#hashtag_skills_h1 {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+#projects .projects-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+#projects .projects-cards .card {
+  flex: 1;
+  min-width: 350px;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#projects .projects-cards .card .info i {
+  color: #000000;
+  font-size: 8rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+
+#projects .projects-cards .card .info p {
+  font-size: 1.1rem;
+  transition: 0.5s;
+}
+
+#projects img {
+  height: 5vh;
+  width: 5vh;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 720px) {
+  header .info-text h1 {
+    font-size: 4rem;
+  }
+
+  header .info-text h3 {
+    font-size: 1.1rem;
+  }
+
+  #about .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about .card img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+
+footer {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  transition: 0.5s;
+  user-select: none;
+}
+footer.active {
+  background-color: #1A1A1A;
+  transition: 0.5s;
+}
+
+footer p {
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.footer-content {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.social-links a {
+  color: #333;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+#icon_sm1,
+#icon_sm2,
+#icon_sm3 {
+  user-select: none;
+}
+
+#toggleFrench,
+#toggleEnglish {
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+}
+
+#text_footer.active,
+#icon_sm1.active,
+#icon_sm2.active,
+#icon_sm3.active,
+#privacy_policy.active,
+#tos.active,
+#toggleFrench.active,
+#toggleEnglish.active {
+  color: white;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 720px) {
+  /* Styles for the footer */
+  footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* Permet le passage à la ligne si nécessaire */
+  }
+
+  .footer-content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-links a {
+    color: #333;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  .language-links a {
+    color: #000;
+    font-size: 20px;
+    margin: 10px;
+    text-decoration: none;
+  }
+
+  .language-links a:hover {
+    border-bottom: 2px solid #000;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}

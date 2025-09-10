@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="x-ua-compatible" content="ie-edge"/>
+        <meta http-equiv="content-type" content="text/html"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="robots" content="index, follow"/>
+        <meta name="keywords" content="tests, onlyspencer, welcome, about, contact"/>
+        <meta name="description" content="This website was made to try different things"/>
+        <meta property="og:title" content="Welcome everyone !"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://onlyspencer.com/"/>
+        <meta property="og:image" content="https://onlyspencer.com/assets/img/avatar.webp"/>
+        <link rel="stylesheet" type="text/css" href="./style.css"/>
+        <link rel="canonical"  href="https://onlyspencer.com/"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="./avatar1.webp"/>
+        <script src="https://kit.fontawesome.com/b6ba31c77e.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typelighterjs/typelighter.min.js"></script>
+        <script src="./script.js"></script>
+    </head>
+    <body id="body">
+    <header id="header" class="header">
+        <section id="navbar">
+            <div id="toggle"><i class="indicator"></i></div>
+        </section>
+        <div class="info-texts" id="info-text">
+            <h1 id="h1_header">OnlySpencer</h1>
+            <h3><span
+                id="writer"
+                class="typeWriter" 
+                data-speed="5" 
+                data-end="3000" 
+                data-text='["Welcome to my website !", "I am a young developer", "You can contact me with some social medias so dont hesitate !"]'
+                ></span>
+            </h3>
+        </div>
+    </header>
+    <section class="about" id="about">
+        
+        <div class="header" id="abouts">
+            <h1 id="title_about">A PROPOS DE MOI  <i id="hashtag_myprojects_h1" class="fas fa-hashtag" onclick="scrollToSection('about')"></i></h1>
+        </div>
+        <div class="card" id="about_card" onclick="redirectCardClick('about-card')">
+            <img src="./avatar1.webp" alt="logo" id="avatar">
+            <div class="info">
+                <h1 id="title_card_aboutme">Salut, c'est OnlySpencer !</h1>
+                <p class="text_abtme" id="text_card_aboutme">Moi c'est Arthur alias OnlySpencer, un jeune
+                    développeur de lycée qui aime découvrir différents langages
+                    selon ce que je veux faire. J'ai déjà découvert le
+                    front-end dans le monde du web et je me suis mis
+                    récemment à la programmation d'applications Android...
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <div class="header" id="header_projects">
+            <h1 id="title_header_projects">MES PROJETS<i id="hashtag_about_h1" class="fas fa-hashtag" onclick="scrollToSection('projects')"></i></h1>
+        </div>
+        <div class="projects-cards" id="projects_cards">
+            <div class="card" id="cards_project">
+                <div class="info">
+                    <h1 id="title_card1_projects">Expérience Pro</h1>
+                    <p id="text_card1_projects">
+                        Il y a un an, j'ai participé à un stage professionnel qui m'a amené à 
+                        découvrir encore plus le front-end et à m'intérésser 
+                        d'avantage à ce monde si vaste [...] </br></br>
+                    </p>
+                </div>
+            </div> 
+            <div class="card" id="cards_project2">
+                <div class="info">
+                    <h1 id="title_card2_projects">Discord.py</h1>
+                    <p id="text_card2_projects">
+                        L'an dernier, j'ai décidé de m'amuser à créer un bot Discord avec Python, c'était assez intéréssant ! [...]
+                    </p>
+                </div>
+            </div>
+            <div class="card" id="cards_project3">
+                <div class="info">
+                    <h1 id="title_card3_projects">SP Project</h1>
+                    <p id="text_card3_projects">
+                        Depuis quelque semaines, je travail à l'aide d'une amie sur un projet de chauffage grâce à un panneau solaire thermique [...]
+                    </p>
+                </div>
+            </div>
+            <div class="card" id="cards_project4">
+                <div class="info">
+                  <h1 id="title_card4_projects">Projet 4</h1>
+                  <p id="text_card4_projects">
+                    Description du projet 4. Cela peut être n'importe quoi que vous voulez mettre en avant !
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="cards_project5">
+                <div class="info">
+                  <h1 id="title_card5_projects">Projet 5</h1>
+                  <p id="text_card5_projects">
+                    Description du projet 5. Un autre projet intéressant à partager.
+                  </p>
+                </div>
+              </div>
+              <div class="card" id="cards_project6">
+                <div class="info">
+                    <h1 id="title_card6_projects">Tu veux en savoir plus ?</h1>
+                    <p id="text_card6_projects">
+                        Depuis mes débuts, en 2019, j'aime découvrir de nouveaux langages et problématiques associées [...]
+                    </p>
+                </div>
+              </div>
+        </div>
+    </section>
+    <section>
+        <div class="skills" id="myskills">
+            <h1 class="title-skills">Mes Compétences <i class="fas fa-hashtag" onclick="scrollToSection('myskills')"></i></h1>
+            <div class="cards">
+              <div class="box_card" id="html">
+                <div class="text_box_card">
+                  <svg>
+                    <circle cx="50px" cy="50px" r="40px"></circle>
+                    <circle cx="50px" cy="50px" r="40px"></circle>
+                  </svg>
+                  <span><strong>75%</strong></span>
+                </div>
+                <h1 class="title_box_card">HTML</h1>
+              </div>
+              <div class="box_card" id="html">
+                <div class="text_box_card">
+                  <svg>
+                    <circle cx="50px" cy="50px" r="40px"></circle>
+                    <circle cx="50px" cy="50px" r="40px"></circle>
+                  </svg>
+                  <span><strong>75%</strong></span>
+                </div>
+                <h1 class="title_box_card">HTML</h1>
+              </div>
+              <div class="box_card" id="html">
+                <div class="text_box_card">
+                  <svg>
+                    <circle cx="50px" cy="50px" r="40px"></circle>
+                    <circle cx="50px" cy="50px" r="40px"></circle>
+                  </svg>
+                  <span><strong>75%</strong></span>
+                </div>
+                <h1 class="title_box_card">HTML</h1>
+              </div>
+              <div class="box_card" id="html">
+                <div class="text_box_card">
+                  <svg>
+                    <circle cx="50px" cy="50px" r="40px"></circle>
+                    <circle cx="50px" cy="50px" r="40px"></circle>
+                  </svg>
+                  <span><strong>75%</strong></span>
+                </div>
+                <h1 class="title_box_card">HTML</h1>
+              </div>
+    </section>
+    <section>
+        <footer id="footer">
+            <div class="footer-content">
+              <p><b id="text_footer">Je tiens a dire que ce site internet est en pleine construction, rien n'est encore terminé !!</b></p>
+              <div class="social-links">
+                <a href="https://instagram.com/arthur_.lvt/" target="_blank"><i class="fa fa-instagram" id="icon_sm1"></i></a>
+                <a href="https://github.com/OnlySpencer/" target="_blank"><i class="fa fa-github" id="icon_sm2"></i></a>
+                <a href="https://dev.to/arthurlvt" target="_blank"><i class="fa-brands fa-dev" id="icon_sm3"></i></a>
+                <a class="privacybtn" id="privacy_policy" href="./privacy-policy" target="_blank">Confidentialité</a>
+                ·
+                <a class="termsbtn" id="tos" href="./terms_of_use" target="_blank">Conditions d'utilisation</a>
+              </div>
+            </div>
+            <a href="#" onclick="toggleLanguage('fr')" id="toggleFrench">Français |</a>
+            <a href="#" onclick="toggleLanguage('en')" id="toggleEnglish">English</a>
+          </footer>
+    </section>
+      <!-- End Navbar -->
+  
+      <!-- Dark and Light mod -->
+      <!-- <div id="allText"><h1>Test</h1></div>---->
+  
+      <script>
+        toggle.onclick = function () {
+          const body = document.getElementById("body");
+          body.classList.toggle("active");
+          const navbar = document.getElementById("navbar");
+          navbar.classList.toggle("active");
+          const toggle = document.getElementById("toggle");
+          toggle.classList.toggle("active");
+          const h1_header = document.getElementById("h1_header");
+          h1_header.classList.toggle("active");          
+          /* const text = document.getElementById('allText'); text.classList.toggle('active');*/
+          const info_text = document.getElementById("info-text");
+          info_text.classList.toggle("active");
+          const writer_info_text = document.getElementById("writer");
+          writer_info_text.classList.toggle("active")
+
+          const about = document.getElementById("about")
+          about.classList.toggle("active");
+          const about_card = document.getElementById("about_card");
+          about_card.classList.toggle("active");
+          const title_about = document.getElementById("title_about");
+          title_about.classList.toggle("active");
+          const title_card_aboutme = document.getElementById("title_card_aboutme");
+          title_card_aboutme.classList.toggle("active");
+          const text_card_aboutme = document.getElementById("text_card_aboutme");
+          text_card_aboutme.classList.toggle("active");
+
+          const projects = document.getElementById("projects");
+          projects.classList.toggle("active");
+          const title_header_projects = document.getElementById("title_header_projects");
+          title_header_projects.classList.toggle("active");
+          const cards_project = document.getElementById("cards_project");
+          cards_project.classList.toggle("active")
+          const title_card1_projects = document.getElementById("title_card1_projects");
+          title_card1_projects.classList.toggle("active");
+          const text_card1_projects = document.getElementById("text_card1_projects");
+          text_card1_projects.classList.toggle("active");
+          const cards_project2 = document.getElementById("cards_project2");
+          cards_project2.classList.toggle("active");
+          const title_card2_projects = document.getElementById("title_card2_projects");
+          title_card2_projects.classList.toggle("active");
+          const text_card2_projects = document.getElementById("text_card2_projects");
+          text_card2_projects.classList.toggle("active");
+          const cards_project3 = document.getElementById("cards_project3");
+          cards_project3.classList.toggle("active");
+          const title_card3_projects = document.getElementById("title_card3_projects");
+          title_card3_projects.classList.toggle("active");
+          const text_card3_projects = document.getElementById("text_card3_projects");
+          text_card3_projects.classList.toggle("active");
+          const cards_project4 = document.getElementById("cards_project4");
+          cards_project4.classList.toggle("active");
+          const title_card4_projects = document.getElementById("title_card4_projects");
+          title_card4_projects.classList.toggle("active");
+          const text_card4_projects = document.getElementById("text_card4_projects");
+          text_card4_projects.classList.toggle("active");
+          const cards_project5 = document.getElementById("cards_project5");
+          cards_project5.classList.toggle("active");
+          const title_card5_projects = document.getElementById("title_card5_projects");
+          title_card5_projects.classList.toggle("active");
+          const text_card5_projects = document.getElementById("text_card5_projects");
+          text_card5_projects.classList.toggle("active");
+          const cards_project6 = document.getElementById("cards_project6");
+          cards_project6.classList.toggle("active");
+          const title_card6_projects = document.getElementById("title_card6_projects");
+          title_card6_projects.classList.toggle("active");
+          const text_card6_projects = document.getElementById("text_card6_projects");
+          text_card6_projects.classList.toggle("active");
+
+          const footer = document.getElementById("footer");
+          footer.classList.toggle("active");
+          const text_footer = document.getElementById("text_footer");
+          text_footer.classList.toggle("active");
+          const icon_sm1 = document.getElementById("icon_sm1");
+          icon_sm1.classList.toggle("active");
+          const icon_sm2 = document.getElementById("icon_sm2");
+          icon_sm2.classList.toggle("active");
+          const icon_sm3 = document.getElementById("icon_sm3");
+          icon_sm3.classList.toggle("active");
+          const privacy_policy = document.getElementById("privacy_policy");
+          privacy_policy.classList.toggle("active");
+          const tos = document.getElementById("tos");
+          tos.classList.toggle("active");
+
+          const toggleFrench = document.getElementById("toggleFrench");
+          toggleFrench.classList.toggle("active");
+          const toggleEnglish = document.getElementById("toggleEnglish");
+          toggleEnglish.classList.toggle("active");
+        };
+      </script>
+</body>
+</html>

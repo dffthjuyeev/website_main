@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8"/>
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"/>-->
-    <meta http-equiv="refresh" content="1; URL=https://youtu.be/dQw4w9WgXcQ?si=JVF85B7DcpL6WW8s
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="robot" content="index, nofollow"/>
-    <meta name="keywords" content="onlyspencer"/>
-    <meta property="og:title" content="Arthur alias OnlySpencer"/>
+    <meta name="keywords" content="arthurdev"/>
+    <meta property="og:title" content="ArthurDev"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://onlyspencer.com/"/>
+    <meta property="og:url" content="https://arthurdev.fr"/>
     <!--<meta property="og:image" content=""/>-->
     <meta property="og:description" content="Ce site est un test"/>
     <title>ONLYSPENCER</title>
@@ -19,10 +18,29 @@
     <link rel="canonical" href="https://onlyspencer.com/"/>
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/avatar1.webp"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-lHg5p9gz5Y6iZu6ae3U6eotI2IFf0Bg4ztniQ4f6GSSD9XNSmRHBRVA/Mm7Sx91Fm0oiB++lkkzJj4Q4oBcvDg==" crossorigin="anonymous"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typelighterjs/typelighter.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <!--<script>alert('Ce site est en pleine configuration ; \n Des bugs peuvent arriver mais seront vites réglés !');</script>-->
 </head>
+<body>
+  <div id="toggle"><i class="indicator"></i></div>
+  <div class="center">
+    <h1>Coming Soon...</h1>
+  </div>
+  <script>
+    // Toggle mode clair/sombre
+    const toggle = document.getElementById("toggle");
+    toggle.onclick = function () {
+      document.body.classList.toggle("active");
+      toggle.classList.toggle("active");
+    };
+
+    setTimeout(() => {
+    window.location.href = "404.html";
+    }, 2000);
+  </script>
+</body>
 </html>
