@@ -95,3 +95,8 @@ contactForm.addEventListener('submit', async (e) => {
     submitBtn.textContent = originalText;
     submitBtn.disabled = false;
 });
+
+// avertir que le site est un prototype
+window.addEventListener('load', () => {
+    alert("Attention : Ce site est un prototype réalisé dans le cadre d'un projet. Merci de ne pas nous contacter pour le moment!");
+});
