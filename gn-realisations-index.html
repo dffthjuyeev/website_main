@@ -73,7 +73,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <!-- CSS & JS files -->
-    <link rel="stylesheet" href="./gn-test/assets/css/styles.css"/>
+    <link rel="stylesheet" href="./gn-test/assets/css/styles.css" />
     <script src="./gn-test/script.js" defer></script>
   </head>
   <body>
@@ -116,13 +116,20 @@
             de vos projets!
           </p>
           <a href="#contact" class="hero__cta">Demander un devis</a>
-          <a href="./gn-test/assets/others/gn-contact.vcf" download class="hero__cta hero__cta--secondary">Ajouter le contact</a>        
-          <div class="hero__scroll">
+          <a
+            href="./gn-test/assets/others/gn-contact.vcf"
+            download
+            class="hero__cta hero__cta--secondary"
+            >Ajouter le contact</a
+          >
+        </div>
+        <div class="hero__scroll">
           Découvrir
           <span></span>
         </div>
       </section>
 
+      <!-- SECTION PRODUITS -->
       <section id="produits" class="produits">
         <div class="container">
           <h2 class="produits__title">Nos Realisations</h2>
@@ -226,7 +233,7 @@
             </div>
           </div>
 
-          <!-- Pièces en acier -->
+          <!-- Pièces en fer forgé -->
           <div class="produits__category">
             <h3 class="produits__category-title">Pièces en fer forgé</h3>
             <div class="produits__grid">
@@ -257,7 +264,7 @@
             </div>
           </div>
 
-          <!-- Ferronerie & Autre -->
+          <!-- Ferronnerie -->
           <div class="produits__category">
             <h3 class="produits__category-title">Côté Ferronerie</h3>
             <div class="produits__grid">
@@ -290,6 +297,7 @@
         </div>
       </section>
 
+      <!-- SECTION CONTACT -->
       <section id="contact" class="contact">
         <div class="container">
           <h2 class="contact__title">Contact</h2>
@@ -389,9 +397,7 @@
                   />
                 </div>
                 <div class="form__group">
-                  <label for="project" class="form__label"
-                    >Type de projet</label
-                  >
+                  <label for="project" class="form__label">Type de projet</label>
                   <select id="project" name="project" class="form__select">
                     <option value="">-- Sélectionner --</option>
                     <option value="portail">Portail</option>
@@ -437,6 +443,5 @@
       <button class="lightbox__close" aria-label="Fermer">&times;</button>
       <img src="" alt="" class="lightbox__img" id="lightbox-img" />
     </div>
-
   </body>
 </html>
