@@ -279,15 +279,15 @@ HERO SECTION
 }
 
 .hero__cta--secondary {
-    background-color: transparent;
-    color: var(--color-secondary);
-    border: 2px solid var(--color-secondary);
-    margin-top: var(--spacing-sm);
+  background-color: transparent;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-secondary);
+  margin-top: var(--spacing-sm);
 }
 
 .hero__cta--secondary:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .hero__scroll {
@@ -483,6 +483,82 @@ footer {
 }
 
 /* ===========================================
+      PAGES LÉGALES (Politique, Mentions)
+=========================================== */
+.legal {
+  padding: 120px 0 60px;
+  min-height: 100vh;
+}
+
+.legal__title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.legal__date {
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-bottom: var(--spacing-xl);
+}
+
+.legal__section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.legal__section h2 {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.legal__section p,
+.legal__section li {
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-xs);
+}
+
+.legal__section ul {
+  list-style: disc;
+  padding-left: var(--spacing-lg);
+  margin-top: var(--spacing-sm);
+}
+
+.legal__back {
+  display: inline-block;
+  margin-top: var(--spacing-lg);
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.legal__back:hover {
+  text-decoration: underline;
+}
+
+/* Media query tablette */
+@media (min-width: 768px) {
+  .legal__title {
+    font-size: 2.5rem;
+  }
+
+  .legal__section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Media query desktop */
+@media (min-width: 1024px) {
+  .legal {
+    padding: 150px 0 80px;
+  }
+
+  .legal__title {
+    font-size: 3rem;
+  }
+}
+
+/* ===========================================
 SECTION PRODUITS
 =========================================== */
 .produits {
@@ -664,12 +740,12 @@ MEDIA QUERIES RESPONSIVE - TABLETTE (>= 768px)
 
   .contact__title {
     font-size: 2.5rem;
-  } 
+  }
 
   .contact__container {
     grid-template-columns: 1fr 1.5fr;
   }
- 
+
   .form__row {
     display: grid;
     grid-template-columns: 1fr 1fr;
